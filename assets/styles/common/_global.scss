@@ -226,3 +226,42 @@ abbr {
 .nav-tabs>li.active>a.pestana, .nav-tabs>li.active>a.pestana:focus, .nav-tabs>li.active>a.pestana:hover {
 	border:none;
 }
+
+.namemail {
+	width:40%;
+    font-style: italic;
+    background-color: #f7f7f7;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.mensaje{
+	width:100%;
+    font-style: italic;
+    background-color: #f7f7f7;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.botoninv {
+    border-radius: 0;
+    border-color: #de0029;
+    background-color: #f5f5f5;
+    color: #de0029;
+    padding: 10px 20px;
+    margin-top: 25px;
+	font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 35%;
+}
+
+.envianos {
+	color: #de0029;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.contactos {
+	margin-bottom:30px;
+}
