@@ -38,6 +38,7 @@
 </ul>
 
 <div class="tab-content serv-content">
+
     <?php
       $loop = new WP_Query( array( 'post_type' => 'servicio','order' => 'ASC') );
       $count=0;
@@ -45,13 +46,15 @@
           while ( $loop->have_posts() ) : $loop->the_post(); 
             $count=$count+1;
               if ($count==1) {
-                echo '<div id="servicio';echo $count;echo'" class="tab-pane fade in active">'; 
-                echo get_the_content();
+                echo '<div id="servicio';echo $count;echo'" class="tab-pane fade in active">'; ?>
+                <h2 class="text-uppercase"><?php echo get_the_title();?></h2>
+                <?php echo get_the_content();
                 echo '</div>';
               } 
               else {
-                echo '<div id="servicio';echo $count;echo'" class="tab-pane fade">'; 
-                echo get_the_content();
+                echo '<div id="servicio';echo $count;echo'" class="tab-pane fade">'; ?>
+                <h2 class="text-uppercase"><?php echo get_the_title();?></h2>
+                <?php echo get_the_content();
                 echo '</div>';
               } 
           endwhile;
