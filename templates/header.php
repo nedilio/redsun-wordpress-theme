@@ -1,6 +1,6 @@
 <header class="banner">
 <nav class="navbar navbar-default menutop">
-    <div class="red-stripe">
+    <div class="red-stripe hidden-xs">
     </div>
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -15,7 +15,7 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
 <!--         <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Servicios</a></li>

@@ -45,7 +45,7 @@
       ?>
         <div class="carousel-caption captionheader">
           <h1 class="titulocarousel"><?php echo get_the_title(); ?></h1>
-          <p><?php echo get_the_content(); ?></p>
+          <p class="hidden-xs"><?php echo get_the_content(); ?></p>
           <button type="button" class="btn boton">ir a servicios</button>
         </div>
       </div>          

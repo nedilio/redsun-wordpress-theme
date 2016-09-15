@@ -9,6 +9,20 @@
     position: relative;
     border-radius:0px;
 }
+@media (max-width: 767px) {
+	.menutop{
+		padding: 13px 0;
+	}
+	.navbar-brand {
+		margin-top: -16px;
+	}
+	h1.titulocarousel {
+		margin-bottom:0px;
+	}
+	.navbar-collapse {
+		margin-top: 10px;
+	}
+}
 .red-stripe {
     padding: 15px 0;
     background: #de0029;
@@ -112,7 +126,18 @@
     top: 15px;
     padding-left: 30px;
 }
+@media (max-width: 767px) {
+	.caption-testimonial{
+		top:-20px;
+	}
+	.caption-testimonial>p{
+		 margin-top: -45px;
+	}
+	ol.indicators-testimonial {
+		bottom: -5px;
+}
 
+}
 .indicators-testimonial {
 	left: 66%;
 	bottom: 10px;
