@@ -13,7 +13,7 @@
 	<h1>Servicios</h1>
 </div>
 <section class="container serviciospage">
-<ul class="nav nav-tabs row">
+<ul class="nav nav-tabs row hidden-xs">
     <?php
       $loop = new WP_Query( array( 'post_type' => 'servicio','order' => 'ASC') );
       $count=0;
@@ -37,7 +37,7 @@
       ?>
 </ul>
 
-<div class="tab-content serv-content">
+<div class="tab-content serv-content hidden-xs">
 
     <?php
       $loop = new WP_Query( array( 'post_type' => 'servicio','order' => 'ASC') );
@@ -60,5 +60,44 @@
           endwhile;
         endif;
       ?>
+</div>
+
+<div class="panel-group vissible-xs" id="accordion" role="tablist" aria-multiselectable="true">
+  
+    <?php
+      $loop = new WP_Query( array( 'post_type' => 'servicio','order' => 'ASC') );
+      $count=0;
+        if ( $loop->have_posts() ) :
+          while ( $loop->have_posts() ) : $loop->the_post(); 
+            $count=$count+1;
+              if ($count==1) {
+                echo '<div class="panel panel-default">';
+                   echo'<div class="panel-heading" role="tab" id="heading';echo $count; echo '">';
+                    echo '<h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse';echo $count; echo '" aria-expanded="false" aria-controls="collapse'; echo $count; echo '">';
+                        echo get_the_title();
+                    echo '</a></h4></div>';
+                    echo '<div id="collapse';echo $count;echo'" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading';echo $count;echo'">
+      <div class="panel-body">';echo get_the_content();echo '</div></div>';
+              } 
+              else {
+                echo '<div class="panel panel-default">';
+                   echo'<div class="panel-heading" role="tab" id="heading';echo $count; echo '">';
+                    echo '<h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse';echo $count; echo '" aria-expanded="false" aria-controls="collapse'; echo $count; echo '">';
+                        echo get_the_title();
+                echo '</a></h4></div>';
+                    echo '<div id="collapse';echo $count;echo'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading';echo $count;echo'">
+      <div class="panel-body">';echo get_the_content();echo '</div></div>';
+              } 
+          endwhile;
+        endif;
+      ?>
+      
+
+
+ <script>
+   $('.collapse').collapse()
+ </script> 
 </div>
 </section>
