@@ -62,7 +62,7 @@
       ?>
 </div>
 
-<div class="panel-group vissible-xs" id="accordion" role="tablist" aria-multiselectable="true">
+<div class="panel-group visible-xs" id="accordion" role="tablist" aria-multiselectable="true">
   
     <?php
       $loop = new WP_Query( array( 'post_type' => 'servicio','order' => 'ASC') );
