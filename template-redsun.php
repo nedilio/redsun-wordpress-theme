@@ -12,17 +12,19 @@
     <?php
       $loop = new WP_Query( array( 'post_type' => 'slider','order' => 'ASC') );
       $count=0;
+      $class="";
         if ( $loop->have_posts() ) :
           while ( $loop->have_posts() ) : $loop->the_post(); 
-            $count=$count+1;
-              if ($count==1) {
-                echo '<li data-target="#carousel-header" data-slide-to="0" class="active"></li>';
+            
+              if ($count==0) {
+                $class="active";
               } 
               else {
-                echo '<li data-target="#carousel-header" data-slide-to="';
-                echo $count-1;
-                echo '"></li>';
-              } 
+                $class=" ";
+              } ?>
+                <li data-target="#carousel-header" data-slide-to="<?php echo $count;?>" class="<?php echo $class;?>"></li>
+            <?php 
+            $count++;
           endwhile;
         endif;
       ?>
@@ -32,25 +34,29 @@
       <?php
         $loop = new WP_Query( array( 'post_type' => 'slider','order' => 'ASC') );
         $count=0;
+        $class="";
           if ( $loop->have_posts() ) :
             while ( $loop->have_posts() ) : $loop->the_post(); 
-              $count=$count+1;
-                if ($count==1) {
-                  echo '<div class="item active">';
+                if ($count==0) { 
+                  $class="active";
+
                 } 
                 else {
-                  echo '<div class="item">';
-                }
-                the_post_thumbnail('tamano_slider', array('class'=>'imagenslider')); //, array('class'=>'')
-      ?>
-        <div class="carousel-caption captionheader">
-          <h1 class="titulocarousel"><?php echo get_the_title(); ?></h1>
-          <p class="hidden-xs"><?php echo get_the_content(); ?></p>
-          <button type="button" class="btn boton">ir a servicios</button>
-        </div>
-      </div>          
+                  $class=" ";    }
+            
+            ?>
+              <div class="item <?php echo $class;?>">
+                <?php the_post_thumbnail('tamano_slider', array('class'=>'imagenslider')); //, array('class'=>'')?>
+                <div class="carousel-caption captionheader">
+                  <h1 class="titulocarousel"><?php echo get_the_title(); ?></h1>
+                  <p class="hidden-xs"><?php echo get_the_content(); ?></p>
+                  <button type="button" class="btn boton">ir a servicios</button>
+                </div>
+              </div>          
 
-            <?php endwhile;
+            <?php 
+              $count++;
+            endwhile;
           endif;
       ?>
 
@@ -96,22 +102,22 @@
     <ol class="carousel-indicators indicators-testimonial">
       <?php      
         $loop = new WP_Query( array( 'post_type' => 'testimonio','order' => 'ASC') );
-        $count=0;
+      $count=0;
+      $class="";
         if ( $loop->have_posts() ) :
-        while ( $loop->have_posts() ) : $loop->the_post(); 
-        $count=$count+1;
-      ?>
-      
-      <?php if ($count==1) {
-        echo '<li data-target="#carousel-testimonial" data-slide-to="0" class="active"></li>';
-        } 
-      else {
-        echo '<li data-target="#carousel-testimonial" data-slide-to="';
-        echo $count-1;
-        echo '"></li>';
-      } ?>
-      <?php endwhile;
-      endif;
+          while ( $loop->have_posts() ) : $loop->the_post(); 
+            
+              if ($count==0) {
+                $class="active";
+              } 
+              else {
+                $class=" ";
+              } ?>
+                <li data-target="#carousel-header" data-slide-to="<?php echo $count;?>" class="<?php echo $class;?>"></li>
+            <?php 
+            $count++;
+          endwhile;
+        endif;
       ?>
     </ol>
   
@@ -121,35 +127,34 @@
           <?php
           
             $loop = new WP_Query( array( 'post_type' => 'testimonio','order' => 'ASC') );
-            $count=0;
-            if ( $loop->have_posts() ) :
+        $count=0;
+        $class="";
+          if ( $loop->have_posts() ) :
             while ( $loop->have_posts() ) : $loop->the_post(); 
-            $count=$count+1;
-          ?>
-          
-          <?php if ($count==1) {
-      echo '<div class="item active">';
-            } 
-            else {
-      echo '<div class="item">';
-          } ?>
-          
-          <?php 
-          the_post_thumbnail('full', array('class'=>'testimonialimg'))
-          ?>
-          
-            <div class="carousel-caption caption-testimonial">
-            <h3 class="titulocarousel text-left"><?php echo get_the_title(); ?></h3>
-            <p class="text-left"><?php echo get_the_content(); ?></p>
-            <small><p class="text-left">Lorem ipsum dolor sit amet, consectetur.</p></small>
-          </div>
-          </div>          
-          
-          <?php endwhile;
-          
+                if ($count==0) { 
+                  $class="active";
+
+                } 
+                else {
+                  $class=" ";    }
+            
+            ?>
+              <div class="item <?php echo $class;?>">
+                <?php the_post_thumbnail('full', array('class'=>'testimonialimg'));?>
+                <div class="carousel-caption caption-testimonial">
+                  <h1 class="titulocarousel text-left"><?php echo get_the_title(); ?></h1>
+                  <p class="text-left"><?php echo get_the_content(); ?></p>
+                  <small><p class="text-left">Lorem ipsum dolor sit amet, consectetur.</p></small>
+                </div>
+              </div>          
+
+            <?php 
+              $count++;
+            endwhile;
           endif;
+      ?>
           
-          ?>
+
     </div>
     <!-- Controls -->
     <a class="left carousel-control" href="#carousel-testimonial" role="button" data-slide="prev">

@@ -17,21 +17,22 @@
     <?php
       $loop = new WP_Query( array( 'post_type' => 'servicio','order' => 'ASC') );
       $count=0;
+      $class="";
         if ( $loop->have_posts() ) :
           while ( $loop->have_posts() ) : $loop->the_post(); 
-            $count=$count+1;
-              if ($count==1) {
-                echo '<li class="active col-sm-3 text-center"><a class="pestana" data-toggle="tab" href="#servicio';echo $count;echo'">'; 
-                the_post_thumbnail(array('class'=>'img-responsive')); ?>
-                <div class="tabtext"><?php echo get_the_title();?></div>
-                <?php echo '</a><hr class="hrserv"></li>';
-              } 
-              else {
-                echo '<li class="col-sm-3 text-center"><a class="pestana" data-toggle="tab" href="#servicio';echo $count;echo'">'; 
-                the_post_thumbnail(array('class'=>'img-responsive')); ?>
-                <div class="tabtext"><?php echo get_the_title();?></div>
-                <?php echo '</a><hr class="hrserv"></li>';
-              } 
+            if ($count==0) {
+                $class="active";
+            } else {
+                $class=" ";
+            }?>
+                <li class="<?php echo $class;?> col-sm-3 text-center">
+                  <a class="pestana" data-toggle="tab" href="#servicio<?php echo $count;?>">
+                   <?php the_post_thumbnail(array('class'=>'img-responsive')); ?>
+                   <div class="tabtext"><?php echo get_the_title();?></div>
+                  </a><hr class="hrserv">
+                </li>
+              <?php 
+$count++;
           endwhile;
         endif;
       ?>
@@ -42,24 +43,25 @@
     <?php
       $loop = new WP_Query( array( 'post_type' => 'servicio','order' => 'ASC') );
       $count=0;
+      $class="";
         if ( $loop->have_posts() ) :
           while ( $loop->have_posts() ) : $loop->the_post(); 
-            $count=$count+1;
-              if ($count==1) {
-                echo '<div id="servicio';echo $count;echo'" class="tab-pane fade in active">'; ?>
-                <h2 class="text-uppercase"><?php echo get_the_title();?></h2>
-                <?php echo get_the_content();
-                echo '</div>';
-              } 
-              else {
-                echo '<div id="servicio';echo $count;echo'" class="tab-pane fade">'; ?>
-                <h2 class="text-uppercase"><?php echo get_the_title();?></h2>
-                <?php echo get_the_content();
-                echo '</div>';
-              } 
+            if ($count==0) {
+                $class="in active";
+            } else {
+                $class=" ";
+            }?>
+                <div id="servicio<?php echo $count;?>" class="tab-pane fade <?php echo $class;?>">
+                  <h2 class="text-uppercase">
+                    <?php echo get_the_title();?>
+                  </h2>
+                    <?php echo get_the_content();?>
+                </div>
+              <?php 
+$count++;
           endwhile;
         endif;
-      ?>
+      ?>      
 </div>
 
 <div class="panel-group visible-xs" id="accordion" role="tablist" aria-multiselectable="true">
@@ -67,11 +69,14 @@
     <?php
       $loop = new WP_Query( array( 'post_type' => 'servicio','order' => 'ASC') );
       $count=0;
+$class="";
         if ( $loop->have_posts() ) :
           while ( $loop->have_posts() ) : $loop->the_post(); 
-            $count=$count+1;
-              if ($count==1) {
-                ;?>
+            if ($count==0) {
+                $class="in";
+            } else {
+                $class=" ";
+            }?>
                 <div class="panel panel-default">
                    <div class="panel-heading" role="tab" id="heading<?php echo $count;?>">
                     <h4 class="panel-title">
@@ -80,29 +85,16 @@
                       </a>
                     </h4>
                    </div>
-                  <div id="collapse<?php echo $count;?>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<?php echo $count;?>">
-                <div class="panel-body"> 
-                  <?php echo get_the_content();?>
+                  <div id="collapse<?php echo $count;?>" class="panel-collapse collapse <?php echo $class ?>" role="tabpanel" aria-labelledby="heading<?php echo $count;?>">
+                   <div class="panel-body"> 
+                    <?php echo get_the_content();?>
+                   </div>
+                 </div>
                 </div>
-              </div>
-              <?php } 
-              else { ;?>
-                <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="heading<?php echo $count;?>">
-                    <h4 class="panel-title">
-                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $count;?>" aria-expanded="false" aria-controls="collapse<?php echo $count?>">
-                        <?php echo get_the_title(); ?>
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="collapse<?php echo $count?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $count;?>">
-                    <div class="panel-body">
-                      <?php echo get_the_content();?>
-                    </div>
-                  </div>
-              <?php } 
+              <?php 
+$count++;
           endwhile;
         endif;
       ?>
-</div>
+    </div>
 </section>
