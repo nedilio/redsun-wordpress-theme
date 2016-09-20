@@ -185,8 +185,8 @@
 <div class="row">
   <div class="col-xs-9">
     <h2><?php echo get_the_title() ;?></h2>
-    <p class="text-justify"><?php echo get_the_content(); ;?></p>
-    <button type="button" class="btn boton pull-left">ir a servicios</button>
+    <p class="text-justify"><?php echo get_the_excerpt(); ;?></p>
+    <a class="btn boton pull-left" href="<?php echo get_home_url(); ?>/servicios" role="button">ir a servicios</a>
   </div>
   <div class="col-xs-3">
     <?php the_post_thumbnail('full', array('class'=>'img-responsive'));?>
@@ -202,8 +202,8 @@
       </div>
       <div class="col-xs-9">
         <h2><?php echo get_the_title() ;?></h2>
-        <p class="text-justify"><?php echo get_the_content(); ;?></p>
-        <button type="button" class="btn boton pull-right">ir a servicios</button>
+        <p class="text-justify"><?php echo get_the_excerpt(); ;?></p>
+        <a class="btn boton pull-right" href="<?php echo get_home_url(); ?>/servicios" role="button">ir a servicios</a>
       </div>
     </div>
 <hr class="hr-serv">

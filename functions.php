@@ -26,3 +26,10 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+// Replaces the excerpt "Read More" text by a link
+function new_excerpt_more($more) {
+       global $post;
+  return ' ...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
