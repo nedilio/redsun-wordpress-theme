@@ -12,7 +12,8 @@
 <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/images/fondoheader.jpg" alt="Header"> -->
 
 <div class="pageheader text-center">
-	<h1>Contacto</h1>
+  <div class="overlayheader"></div>
+	<h1 class="headertitle">Contacto</h1>
 </div>
 
 <div class="mapa container">

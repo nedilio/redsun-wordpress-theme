@@ -229,15 +229,33 @@ hr.hrserv{
     background-repeat: no-repeat;
     background-size: cover;
 	color:whitesmoke;
-	vertical-align:middle;
 	text-transform:uppercase;
-	padding:100px;
 	font-size:4.5em;
+}
+.overlayheader {
+	background-color: #000;
+    opacity: .45;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.headertitle {
+	position:relative;
+	top:-63%;
 }
 @media (max-width: 767px) {
 	.pageheader {
 		height:200px;
-		padding:60px;
+	}
+	.overlayheader {
+		background-color: #000;
+	    opacity: .5;
+	    width: 100%;
+	    height: 100%;
+	    position: relative;
+	}
+	.headertitle {
+		top:-70%;
 	}
 }
 .mapa {

@@ -10,7 +10,8 @@
 <?php endwhile; ?>
  -->
 <div class="pageheader text-center">
-	<h1>Servicios</h1>
+  <div class="overlayheader"></div>
+	<h1 class="headertitle">Servicios</h1>
 </div>
 <section class="container serviciospage">
 <ul class="nav nav-tabs row hidden-xs">
@@ -38,7 +39,7 @@ $count++;
       ?>
 </ul>
 
-<div class="tab-content serv-content hidden-xs">
+<div class="tab-content serv-content hidden-xs col-sm-8 col-sm-offset-2">
 
     <?php
       $loop = new WP_Query( array( 'post_type' => 'servicio','order' => 'ASC') );
