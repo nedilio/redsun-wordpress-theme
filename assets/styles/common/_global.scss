@@ -346,3 +346,22 @@ width:100%;
 .textcajas {
 	position: absolute;
 }
+.flechawhite {
+	width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid white;
+    position: absolute;
+    top: 30px;
+}
+.flechagris {
+	width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #eeeeee;
+    position: absolute;
+    top: 30px;
+    right: -20px;
+}

@@ -11,7 +11,7 @@
  -->
 <div class="pageheader text-center">
   <div class="overlayheader"></div>
-	<h1 class="headertitle">Servicios</h1>
+  <h1 class="headertitle">Servicios</h1>
 </div>
 <section class="container serviciospage">
 <ul class="nav nav-tabs row hidden-xs">
@@ -39,7 +39,7 @@ $count++;
       ?>
 </ul>
 
-<div class="tab-content serv-content hidden-xs col-sm-8 col-sm-offset-2">
+<div class="tab-content serv-content hidden-xs">
 
     <?php
       $loop = new WP_Query( array( 'post_type' => 'servicio','order' => 'ASC') );
@@ -49,14 +49,42 @@ $count++;
           while ( $loop->have_posts() ) : $loop->the_post(); 
             if ($count==0) {
                 $class="in active";
+                $cajasflechas='<div class="row">
+              <div class="col-sm-4">
+                <div class="cajas text-center">
+                  <h3 class="textcajas">Ubicación de productos y proveedores</h3>
+                  <div class="flechagris"></div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="cajas text-center">
+                  <div class="flechawhite"></div>
+                  <h3 class="textcajas">Ubicación de productos y proveedores</h3>
+                  <div class="flechagris"></div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="cajas text-center">
+                  <div class="flechawhite"></div>
+                  <h3 class="textcajas">Ubicación de productos y proveedores</h3>
+                </div>
+              </div>
+            </div>';
             } else {
                 $class=" ";
+                $cajasflechas=' ';
             }?>
+                
                 <div id="servicio<?php echo $count;?>" class="tab-pane fade <?php echo $class;?>">
+                  <?php echo $cajasflechas; ?>
+                  <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
                   <h2 class="text-uppercase">
                     <?php echo get_the_title();?>
                   </h2>
                     <?php echo get_the_content();?>
+                  </div>
+                  </div>
                 </div>
               <?php 
 $count++;
