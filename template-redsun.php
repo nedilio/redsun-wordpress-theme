@@ -80,20 +80,21 @@
     <div class="col-sm-4 text-center">
       <h2 class="text-uppercase"><strong>quienes somos</strong></h2>
       <hr class="hrrojo">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quasi necessitatibus officiis possimus, quia laudantium, quae aperiam libero similique suscipit laboriosam illo facere. Animi autem corporis, tempora qui alias eaque.</p>
+      <p>Representantes de fábricas Chinas a nivel Mundial</p>
+      <p>Contamos con un equipo de especialista de profesionales en el área comercial y de negocios internacionales responsables, activos y comprometidos con el interés de nuestros clientes.</p>
     </div>
 
     <div class="col-sm-4 text-center">
       <h2 class="text-uppercase"><strong>por que redsun?</strong></h2>
       <hr class="hrrojo">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quasi necessitatibus officiis possimus, quia laudantium, quae aperiam libero similique suscipit laboriosam illo facere. Animi autem corporis, tempora qui alias eaque.</p>
+      <p>Porque atendemos de una manera rápida, eficiente y segura a nuestros clientes, ahorrándoles tiempo, recursos y minimizamos el riesgo en su inversión. Con nosotros usted podrá importar desde China con seguridad y confianza</p>
       <p><em><strong>Somos tus ojos en China</strong></em></p>
     </div>
 
     <div class="col-sm-4 text-center">
       <h2 class="text-uppercase"><strong>mision</strong></h2>
       <hr class="hrrojo">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quasi necessitatibus officiis possimus, quia laudantium, quae aperiam libero similique suscipit laboriosam illo facere. Animi autem corporis, tempora qui alias eaque.</p>
+      <p>Ofrecer óptimos servicios en materia de asesoría, logística y operaciones, satisfaciendo las necesidades de nuestros clientes y garantizando su exito en las importaciones desde el continente asiático.</p>
     </div>
   </div>
 </section>
