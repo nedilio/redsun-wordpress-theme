@@ -60,11 +60,14 @@ body{font-family:'Open Sans', sans-serif !important;
 .imagenslider {
 	width:100% !important;
 }
-
+.carousel-indicators {
+    bottom: 0px;
+}
 .captionheader {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 45px;
+    top: 0;
+}
+.carousel-caption {
+	bottom:0;
 }
 
 .boton {
@@ -74,14 +77,14 @@ body{font-family:'Open Sans', sans-serif !important;
 	color: whitesmoke;
 	text-transform: uppercase;
 	padding: 10px 20px;
-	margin-top: 25px;
+	/*margin-top: 25px;*/
 	font-size: 0.7em;
 }
 
 .titulocarousel {
 	text-transform: uppercase;
 	/*font-size: 1.5em;*/
-	margin-bottom: 50px;
+	/*margin-bottom: 50px;*/
 }
 
 .info {
@@ -317,9 +320,6 @@ width:100%;
 	.navbar-brand {
 		margin-top: -16px;
 	}
-	h1.titulocarousel {
-		margin-bottom:-15px;
-	}
 	.navbar-collapse {
 		margin-top: 10px;
 	}
@@ -356,6 +356,11 @@ width:100%;
 	}
 	.textcajas {
 		font-size: 1.3em;
+	}
+	.captionheader {
+		right: 5%;
+    	left: 5%;
+    	top: -40px;
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
