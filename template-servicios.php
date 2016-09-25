@@ -52,21 +52,21 @@ $count++;
                 $cajasflechas='<div class="row">
               <div class="col-sm-4">
                 <div class="cajas text-center">
-                  <h3 class="textcajas">Ubicación de productos y proveedores</h3>
+                  <h3 class="textcajas text-center">Ubicación de productos y proveedores</h3>
                   <div class="flechagris"></div>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="cajas text-center">
                   <div class="flechawhite"></div>
-                  <h3 class="textcajas">Ubicación de productos y proveedores</h3>
+                  <h3 class="textcajas text-center">Negociación con proveedores</h3>
                   <div class="flechagris"></div>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="cajas text-center">
                   <div class="flechawhite"></div>
-                  <h3 class="textcajas">Ubicación de productos y proveedores</h3>
+                  <h3 class="textcajas text-center">Cotización de importacion</h3>
                 </div>
               </div>
             </div>';
