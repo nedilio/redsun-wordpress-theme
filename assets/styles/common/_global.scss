@@ -107,13 +107,14 @@ body{font-family:'Open Sans', sans-serif !important;
 .caption-testimonial {
 	width: 35%;
     left: 50%;
-    top: 15px;
+    top: 0px;
     padding-left: 30px;
+    padding-top: 5px;
 }
 
 .indicators-testimonial {
 	left: 66%;
-	bottom: 10px;
+	bottom: -5px;
 }
 
 .serviciossection {
@@ -340,13 +341,15 @@ width:100%;
 		top:-70%;
 	}
 		.caption-testimonial{
-		top:-20px;
+		top:-0px;
+		width:45%;
 	}
 	.caption-testimonial>p{
-		 margin-top: -45px;
+		 margin-top: -0px;
 	}
 	ol.indicators-testimonial {
 		bottom: -5px;
+		left: 20%;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
