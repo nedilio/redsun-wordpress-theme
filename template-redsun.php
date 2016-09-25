@@ -44,7 +44,7 @@
                 } 
                 else {
                   $class=" "; 
-                  $botonslider='<button type="button" class="btn boton">ir a servicios</button>';   }
+                  $botonslider='<button type="button" class="btn boton hidden-xs">ir a servicios</button>';   }
             
             ?>
               <div class="item <?php echo $class;?>">
