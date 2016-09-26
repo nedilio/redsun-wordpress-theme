@@ -5,7 +5,8 @@
 ?>
 
 <section class="container">
-  <div id="carousel-header" class="carousel slide slideheader" data-ride="carousel">
+  <div class="headerxs visible-xs"><img src="<?php echo get_home_url(); ?>/wp-content/uploads/2016/08/slider_logo.jpg" alt="" class="img-responsive"></div>
+  <div id="carousel-header" class="carousel slide slideheader hidden-xs" data-ride="carousel">
   
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -143,12 +144,14 @@
             
             ?>
               <div class="item <?php echo $class;?>">
-                <?php the_post_thumbnail('full', array('class'=>'testimonialimg'));?>
-                <div class="carousel-caption caption-testimonial">
-                  <h1 class="titulocarousel text-left"><?php echo get_the_title(); ?></h1>
-                  <p class="text-left"><?php echo get_the_content(); ?></p>
-                  <small><p class="text-left">Lorem ipsum dolor sit amet, consectetur.</p></small>
-                </div>
+                  <div class="col-sm-6 no-padding hidden-xs">
+                    <?php the_post_thumbnail('full', array('class'=>'img-responsive'));?>
+                  </div>
+                  <div class="carousel-caption caption-testimonial col-sm-6">
+                    <h1 class="titulocarousel text-left"><?php echo get_the_title(); ?></h1>
+                    <p class="text-left"><?php echo get_the_content(); ?></p>
+                    <small><p class="text-left">Lorem ipsum dolor sit amet, consectetur.</p></small>
+                  </div>
               </div>          
 
             <?php 
