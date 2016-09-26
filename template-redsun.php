@@ -144,7 +144,7 @@
             
             ?>
               <div class="item <?php echo $class;?>">
-                  <div class="col-sm-6 no-padding hidden-xs">
+                  <div class="col-sm-6 no-padding">
                     <?php the_post_thumbnail('full', array('class'=>'img-responsive'));?>
                   </div>
                   <div class="carousel-caption caption-testimonial col-sm-6">
