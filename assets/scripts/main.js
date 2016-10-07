@@ -28,9 +28,20 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+
+            $('.animar-izquierda').css('opacity',0);
+            $('.animar-derecha').css('opacity',0);
+
+$('.animar-izquierda').waypoint(function(direction) {
+  jQuery(this).addClass('fadeInLeft').next();
+},{offset:'75%'});
+$('.animar-derecha').waypoint(function(direction) {
+  jQuery(this).addClass('fadeInRight').next();
+},{offset:'75%'});
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+        
       }
     },
     // About us page, note the change from about-us to about_us.

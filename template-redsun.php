@@ -76,7 +76,7 @@
   </div>
 </section>
 
-<section class="info">
+<section class="info" id="parawaypoint">
   <div class="container">
     <div class="col-sm-4 text-center">
       <h2 class="text-uppercase"><strong>quienes somos</strong></h2>
@@ -188,7 +188,7 @@
         ?>
         
         <?php if ($count%2==0) {?>
-<div class="row">
+<div class="row animated animar-derecha">
   <div class="col-xs-9">
     <h2><?php echo get_the_title() ;?></h2>
     <p class="text-justify"><?php echo get_the_excerpt(); ;?></p>
@@ -202,7 +202,7 @@
 <?php
           } 
           else { ?>
-    <div class="row">
+    <div class="row animated animar-izquierda">
       <div class="col-xs-3"> 
         <?php the_post_thumbnail('full', array('class'=>'img-responsive'));?>
       </div>

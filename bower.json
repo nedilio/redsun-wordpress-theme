@@ -7,7 +7,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "3.3.6"
+    "bootstrap-sass": "3.3.6",
+    "animate.css": "^3.5.2",
+    "jquery-waypoints": "waypoints#2"
   },
   "overrides": {
     "bootstrap-sass": {
