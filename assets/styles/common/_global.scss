@@ -306,7 +306,12 @@ width:100%;
 .controlbackground {
 	background-image: none !important;
 }
-
+.tab-servicio{
+min-height: 350px;
+}
+.otros-serv-slider {
+	min-height: 611px;
+}
 @media (max-width: 767px) {
 	.menutop{
 		padding: 13px 0;
