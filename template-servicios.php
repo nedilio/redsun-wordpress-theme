@@ -52,21 +52,21 @@ $count++;
                 $cajasflechas='<div class="row">
               <div class="col-sm-4">
                 <div class="cajas text-center">
-                  <h3 class="textcajas text-center">Ubicación de productos y proveedores</h3>
+                  <h3 class="textcajas text-center"><a href="#ubicacion" aria-controls="ubicacion" role="tab" data-toggle="tab" class="">Ubicación de productos y proveedores</a></h3>
                   <div class="flechagris"></div>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="cajas text-center">
                   <div class="flechawhite"></div>
-                  <h3 class="textcajas text-center">Negociación con proveedores</h3>
+                  <h3 class="textcajas text-center"><a href="#negociacion" aria-controls="negociacion" role="tab" data-toggle="tab">Negociación con proveedores</a></h3>
                   <div class="flechagris"></div>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="cajas text-center">
                   <div class="flechawhite"></div>
-                  <h3 class="textcajas text-center">Cotización de importacion</h3>
+                  <h3 class="textcajas text-center"><a href="#cotizacion" aria-controls="cotizacion" role="tab" data-toggle="tab">Cotización de importacion</a></h3>
                 </div>
               </div>
             </div>';
@@ -78,8 +78,8 @@ $count++;
                 <div id="servicio<?php echo $count;?>" class="tab-pane fade <?php echo $class;?>">
                   <?php echo $cajasflechas; ?>
                   <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                  <h2 class="text-uppercase">
+                    <div class="col-sm-10 col-sm-offset-1">
+                  <h2 class="text-uppercase text-center">
                     <?php echo get_the_title();?>
                   </h2>
                     <?php echo get_the_content();?>

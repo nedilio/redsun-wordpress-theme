@@ -289,6 +289,24 @@ width:100%;
     top: 30px;
     right: -20px;
 }
+
+.textcajas a {
+	color: #000;
+}
+
+.textcajas a.active {
+	color: #de0029;
+}
+
+.textcajas a:hover, .textcajas a:focus {
+	text-decoration: none;
+	color: #de0029;
+}
+
+.controlbackground {
+	background-image: none !important;
+}
+
 @media (max-width: 767px) {
 	.menutop{
 		padding: 13px 0;
