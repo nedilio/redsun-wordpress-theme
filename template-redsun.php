@@ -50,7 +50,7 @@
             ?>
               <div class="item <?php echo $class;?>">
                 <?php the_post_thumbnail('tamano_slider', array('class'=>'imagenslider')); //, array('class'=>'')?>
-                <div class="carousel-caption captionheader">
+                <div class="carousel-caption captionheader hidden">
                   <h1 class="titulocarousel"><?php echo get_the_title(); ?></h1>
                   <p class="hidden-xs"><?php echo get_the_content(); ?></p>
                   <?php echo $botonslider; ?>
@@ -100,78 +100,85 @@
   </div>
 </section>
 
-<section>
-  <div id="carousel-testimonial" class="carousel slide slidetestimonial" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators indicators-testimonial">
-      <?php      
-        $loop = new WP_Query( array( 'post_type' => 'testimonio','order' => 'ASC') );
-      $count=0;
-      $class="";
-        if ( $loop->have_posts() ) :
-          while ( $loop->have_posts() ) : $loop->the_post(); 
-            
-              if ($count==0) {
-                $class="active";
-              } 
-              else {
-                $class=" ";
-              } ?>
-                <li data-target="#carousel-header" data-slide-to="<?php echo $count;?>" class="<?php echo $class;?>"></li>
-            <?php 
-            $count++;
-          endwhile;
-        endif;
-      ?>
-    </ol>
-  
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-  
-          <?php
-          
-            $loop = new WP_Query( array( 'post_type' => 'testimonio','order' => 'ASC') );
+<section class="testimonial container-fluid">
+<div class="row">
+  <div class="col-sm-6 no-padding" style="background-image: url(<?php echo get_template_directory_uri(); ?>/dist/images/testimonios.jpg); background-size: cover; height: 400px;">
+    <!-- <img src="<?php echo get_template_directory_uri(); ?>/dist/images/testimonios.jpg" alt="testimonials" class="img-responsive"> -->
+  </div>
+  <div class="col-sm-6 no-padding">
+    <div id="carousel-testimonial" class="carousel slide slidetestimonial" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators indicators-testimonial">
+        <?php      
+          $loop = new WP_Query( array( 'post_type' => 'testimonio','order' => 'ASC') );
         $count=0;
         $class="";
           if ( $loop->have_posts() ) :
             while ( $loop->have_posts() ) : $loop->the_post(); 
-                if ($count==0) { 
+              
+                if ($count==0) {
                   $class="active";
-
                 } 
                 else {
-                  $class=" ";    }
-            
-            ?>
-              <div class="item <?php echo $class;?>">
-                  <div class="col-sm-6 no-padding">
-                    <?php the_post_thumbnail('full', array('class'=>'img-responsive'));?>
-                  </div>
-                  <div class="carousel-caption caption-testimonial col-sm-6">
-                    <h1 class="titulocarousel text-left"><?php echo get_the_title(); ?></h1>
-                    <p class="text-left"><?php echo get_the_content(); ?></p>
-                    <small><p class="text-left">Lorem ipsum dolor sit amet, consectetur.</p></small>
-                  </div>
-              </div>          
-
-            <?php 
+                  $class=" ";
+                } ?>
+                  <li data-target="#carousel-header" data-slide-to="<?php echo $count;?>" class="<?php echo $class;?>"></li>
+              <?php 
               $count++;
             endwhile;
           endif;
-      ?>
-          
-
+        ?>
+      </ol>
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+    
+            <?php
+            
+              $loop = new WP_Query( array( 'post_type' => 'testimonio','order' => 'ASC') );
+          $count=0;
+          $class="";
+            if ( $loop->have_posts() ) :
+              while ( $loop->have_posts() ) : $loop->the_post(); 
+                  if ($count==0) { 
+                    $class="active";
+    
+                  } 
+                  else {
+                    $class=" ";    }
+              
+              ?>
+                <div class="item <?php echo $class;?>">
+    <!--                   <div class="col-sm-6 no-padding">
+                      <?php the_post_thumbnail('full', array('class'=>'img-responsive'));?>
+                    </div> -->
+                    <div class="carousel-caption caption-testimonial">
+                      <h1 class="titulocarousel text-left"><?php echo get_the_title(); ?></h1>
+                      <p class="text-left"><?php echo get_the_content(); ?></p>
+                      <small><p class="text-left">Lorem ipsum dolor sit amet, consectetur.</p></small>
+                    </div>
+                </div>          
+    
+              <?php 
+                $count++;
+              endwhile;
+            endif;
+        ?>
+            
+    
+      </div>
+      <!-- Controls -->
+      <a class="controlbackground left carousel-control" href="#carousel-testimonial" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="controlbackground right carousel-control" href="#carousel-testimonial" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-testimonial" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-testimonial" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
+</div>
 </section>
 
 <section class="serviciossection hidden">
