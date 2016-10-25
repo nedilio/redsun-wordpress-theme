@@ -11,7 +11,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo.png" alt="Logo"></a>
+      <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo-copia.png" alt="Logo"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
