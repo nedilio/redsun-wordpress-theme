@@ -36,6 +36,7 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
   add_image_size('tamano_slider',1000,290,true); //tamaño de imagen para el slider con crop
+  add_image_size( 'slider-serv', 600, 400,true ); //tamaño de imagen para el slider de otros servicios
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats

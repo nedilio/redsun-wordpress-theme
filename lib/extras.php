@@ -31,3 +31,13 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+function my_image_sizes($sizes) {
+$addsizes = array(
+"slider-serv" => __( "Slider Servicios")
+);
+$newsizes = array_merge($sizes, $addsizes);
+return $newsizes;
+}
+
+add_filter('image_size_names_choose', __NAMESPACE__ . '\\my_image_sizes');
