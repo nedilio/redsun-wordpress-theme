@@ -77,6 +77,16 @@ body{
 	padding: 10px 20px;
 	/*margin-top: 25px;*/
 	font-size: 0.7em;
+	-webkit-transition: all 300ms ease-in;
+-moz-transition: all 300ms ease-in;
+-ms-transition: all 300ms ease-in;
+-o-transition: all 300ms ease-in;
+transition: all 300ms ease-in;
+}
+.boton:hover, .boton:focus {
+	background-color: #fff;
+	color: #de0029;
+	outline: none;
 }
 .titulocarousel {
 	text-transform: uppercase;
