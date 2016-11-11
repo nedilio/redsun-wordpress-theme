@@ -24,7 +24,7 @@
 	<div class="row">
 		<div class="col-sm-6">
 			<p>
-				Porque atendemos de una manera rapida, eficiente y segura a nuestros clients ahorrandoles tiempo, recursos y minimizamos el riesgo en su inversion.Con nosotros usted podra importar desde china con seguridad y confianza
+				Porque atendemos de una manera rapida, eficiente y segura a nuestros clientes ahorrandoles tiempo, recursos y minimizamos el riesgo en su inversion. Con nosotros usted podra importar desde china con seguridad y confianza
 			</p>
 			<br>
 			<p><em><strong>Somos tus ojos en china</strong></em></p>
@@ -33,7 +33,7 @@
 				1355 Market Street, Suite 900<br>
 				San Francisco, CA 94103<br>
 				<br>
-				<abbr title="Phone">Telefono:</abbr> (123) 456-7890 <br>
+				<abbr>Telfono:</abbr> (123) 456-7890 <br>
 				<br>
 				<a class="mail" href="mailto:#">info@redsun.com</a>
 			</address>

@@ -21,12 +21,20 @@
         // JavaScript to be fired on all pages
         if (location.hash) {
             setTimeout(function() {
+                console.log('a[href='+window.location.hash+']');
+                var x = -30;
+                console.log(x);
                 $('.nav-tabs li').removeClass('active');
                 $('a[href='+window.location.hash+']').parent().addClass('active');
                 $('.main-tabs.tab-pane').removeClass('in active');
                 $(window.location.hash).addClass('active in'); 
+                if (location.hash==="#otrosserv") {
+                  $('#servicio3').addClass('active in');
+                  $('a[href=#servicio3]').parent().addClass('active');
+                  x=1000;
+                }
                 $('html, body').animate({
-                    scrollTop: ($('.serviciospage').offset().top)-30
+                    scrollTop: ($('.serviciospage').offset().top)+x
                 }, 1000);
             }, 1000);
         }

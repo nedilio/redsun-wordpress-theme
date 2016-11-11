@@ -2,7 +2,7 @@
 <div class="container">
   <h3>Contactenos</h3>
   <p class="footercont">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, accusantium fugiat minus, temporibus omnis sed magni excepturi voluptatibus consequuntur vitae recusandae unde numquam, fuga quasi voluptate illum. Voluptatibus, molestiae natus?</p>
-  <button type="button" class="btn boton">ir a formulario de contacto</button>
+  <a href="<?php home_url( '/' ); ?>contacto"><button type="button" class="btn boton">ir a formulario de contacto</button></a>
 </div>
 </footer>
 <footer class="footerb">
