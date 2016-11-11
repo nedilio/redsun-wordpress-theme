@@ -19,6 +19,17 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        if (location.hash) {
+            setTimeout(function() {
+                $('.nav-tabs li').removeClass('active');
+                $('a[href='+window.location.hash+']').parent().addClass('active');
+                $('.main-tabs.tab-pane').removeClass('in active');
+                $(window.location.hash).addClass('active in'); 
+                $('html, body').animate({
+                    scrollTop: ($('.serviciospage').offset().top)-30
+                }, 1000);
+            }, 1000);
+        }
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
